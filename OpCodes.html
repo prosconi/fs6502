@@ -1,0 +1,3145 @@
+<dl class="opcodes">
+    <dt id="ADC">ADC</dt>
+    <dd>
+        <p aria-label="summary">Add Memory to Accumulator with Carry</p>
+        <p aria-label="synopsis">A + M + C <span aria-label="right-hand transfer">-&gt;</span> A, C</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>+</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>immediate</td>
+                    <td>ADC #oper</td>
+                    <td>69</td>
+                    <td>2</td>
+                    <td>2 </td>
+                </tr>
+                <tr>
+                    <td>zeropage</td>
+                    <td>ADC oper</td>
+                    <td>65</td>
+                    <td>2</td>
+                    <td>3 </td>
+                </tr>
+                <tr>
+                    <td>zeropage,X</td>
+                    <td>ADC oper,X</td>
+                    <td>75</td>
+                    <td>2</td>
+                    <td>4 </td>
+                </tr>
+                <tr>
+                    <td>absolute</td>
+                    <td>ADC oper</td>
+                    <td>6D</td>
+                    <td>3</td>
+                    <td>4 </td>
+                </tr>
+                <tr>
+                    <td>absolute,X</td>
+                    <td>ADC oper,X</td>
+                    <td>7D</td>
+                    <td>3</td>
+                    <td>4<a href="#opcodes-footnote1" class="footnote" aria-label="see footnote 1">*</a> </td>
+                </tr>
+                <tr>
+                    <td>absolute,Y</td>
+                    <td>ADC oper,Y</td>
+                    <td>79</td>
+                    <td>3</td>
+                    <td>4<a href="#opcodes-footnote1" class="footnote" aria-label="see footnote 1">*</a> </td>
+                </tr>
+                <tr>
+                    <td>(indirect,X)</td>
+                    <td>ADC (oper,X)</td>
+                    <td>61</td>
+                    <td>2</td>
+                    <td>6 </td>
+                </tr>
+                <tr>
+                    <td>(indirect),Y</td>
+                    <td>ADC (oper),Y</td>
+                    <td>71</td>
+                    <td>2</td>
+                    <td>5<a href="#opcodes-footnote1" class="footnote" aria-label="see footnote 1">*</a> </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="AND">AND</dt>
+    <dd>
+        <p aria-label="summary">AND Memory with Accumulator</p>
+        <p aria-label="synopsis">A AND M <span aria-label="right-hand transfer">-&gt;</span> A</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>immediate</td>
+                    <td>AND #oper</td>
+                    <td>29</td>
+                    <td>2</td>
+                    <td>2 </td>
+                </tr>
+                <tr>
+                    <td>zeropage</td>
+                    <td>AND oper</td>
+                    <td>25</td>
+                    <td>2</td>
+                    <td>3 </td>
+                </tr>
+                <tr>
+                    <td>zeropage,X</td>
+                    <td>AND oper,X</td>
+                    <td>35</td>
+                    <td>2</td>
+                    <td>4 </td>
+                </tr>
+                <tr>
+                    <td>absolute</td>
+                    <td>AND oper</td>
+                    <td>2D</td>
+                    <td>3</td>
+                    <td>4 </td>
+                </tr>
+                <tr>
+                    <td>absolute,X</td>
+                    <td>AND oper,X</td>
+                    <td>3D</td>
+                    <td>3</td>
+                    <td>4<a href="#opcodes-footnote1" class="footnote" aria-label="see footnote 1">*</a> </td>
+                </tr>
+                <tr>
+                    <td>absolute,Y</td>
+                    <td>AND oper,Y</td>
+                    <td>39</td>
+                    <td>3</td>
+                    <td>4<a href="#opcodes-footnote1" class="footnote" aria-label="see footnote 1">*</a> </td>
+                </tr>
+                <tr>
+                    <td>(indirect,X)</td>
+                    <td>AND (oper,X)</td>
+                    <td>21</td>
+                    <td>2</td>
+                    <td>6 </td>
+                </tr>
+                <tr>
+                    <td>(indirect),Y</td>
+                    <td>AND (oper),Y</td>
+                    <td>31</td>
+                    <td>2</td>
+                    <td>5<a href="#opcodes-footnote1" class="footnote" aria-label="see footnote 1">*</a> </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="ASL">ASL</dt>
+    <dd>
+        <p aria-label="summary">Shift Left One Bit (Memory or Accumulator)</p>
+        <p aria-label="synopsis">C <span aria-label="left-hand transfer">&lt;-</span> [76543210] <span
+                aria-label="left-hand transfer">&lt;-</span> 0</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>accumulator</td>
+                    <td>ASL A</td>
+                    <td>0A</td>
+                    <td>1</td>
+                    <td>2 </td>
+                </tr>
+                <tr>
+                    <td>zeropage</td>
+                    <td>ASL oper</td>
+                    <td>06</td>
+                    <td>2</td>
+                    <td>5 </td>
+                </tr>
+                <tr>
+                    <td>zeropage,X</td>
+                    <td>ASL oper,X</td>
+                    <td>16</td>
+                    <td>2</td>
+                    <td>6 </td>
+                </tr>
+                <tr>
+                    <td>absolute</td>
+                    <td>ASL oper</td>
+                    <td>0E</td>
+                    <td>3</td>
+                    <td>6 </td>
+                </tr>
+                <tr>
+                    <td>absolute,X</td>
+                    <td>ASL oper,X</td>
+                    <td>1E</td>
+                    <td>3</td>
+                    <td>7 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="BCC">BCC</dt>
+    <dd>
+        <p aria-label="summary">Branch on Carry Clear</p>
+        <p aria-label="synopsis">branch on C = 0</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>relative</td>
+                    <td>BCC oper</td>
+                    <td>90</td>
+                    <td>2</td>
+                    <td>2<a href="#opcodes-footnote2" class="footnote" aria-label="see footnote 2">**</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="BCS">BCS</dt>
+    <dd>
+        <p aria-label="summary">Branch on Carry Set</p>
+        <p aria-label="synopsis">branch on C = 1</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>relative</td>
+                    <td>BCS oper</td>
+                    <td>B0</td>
+                    <td>2</td>
+                    <td>2<a href="#opcodes-footnote2" class="footnote" aria-label="see footnote 2">**</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="BEQ">BEQ</dt>
+    <dd>
+        <p aria-label="summary">Branch on Result Zero</p>
+        <p aria-label="synopsis">branch on Z = 1</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>relative</td>
+                    <td>BEQ oper</td>
+                    <td>F0</td>
+                    <td>2</td>
+                    <td>2<a href="#opcodes-footnote2" class="footnote" aria-label="see footnote 2">**</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="BIT">BIT</dt>
+    <dd>
+        <p aria-label="summary">Test Bits in Memory with Accumulator</p>
+        <p aria-label="notes on the implementation">bits 7 and 6 of operand are transfered to bit 7 and 6 of SR
+            (N,V);<br>
+            the zero-flag is set to the result of operand AND accumulator.</p>
+        <p aria-label="synopsis">A AND M, M7 <span aria-label="right-hand transfer">-&gt;</span> N, M6 <span
+                aria-label="right-hand transfer">-&gt;</span> V</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>M7</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>M6</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>zeropage</td>
+                    <td>BIT oper</td>
+                    <td>24</td>
+                    <td>2</td>
+                    <td>3 </td>
+                </tr>
+                <tr>
+                    <td>absolute</td>
+                    <td>BIT oper</td>
+                    <td>2C</td>
+                    <td>3</td>
+                    <td>4 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="BMI">BMI</dt>
+    <dd>
+        <p aria-label="summary">Branch on Result Minus</p>
+        <p aria-label="synopsis">branch on N = 1</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>relative</td>
+                    <td>BMI oper</td>
+                    <td>30</td>
+                    <td>2</td>
+                    <td>2<a href="#opcodes-footnote2" class="footnote" aria-label="see footnote 2">**</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="BNE">BNE</dt>
+    <dd>
+        <p aria-label="summary">Branch on Result not Zero</p>
+        <p aria-label="synopsis">branch on Z = 0</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>relative</td>
+                    <td>BNE oper</td>
+                    <td>D0</td>
+                    <td>2</td>
+                    <td>2<a href="#opcodes-footnote2" class="footnote" aria-label="see footnote 2">**</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="BPL">BPL</dt>
+    <dd>
+        <p aria-label="summary">Branch on Result Plus</p>
+        <p aria-label="synopsis">branch on N = 0</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>relative</td>
+                    <td>BPL oper</td>
+                    <td>10</td>
+                    <td>2</td>
+                    <td>2<a href="#opcodes-footnote2" class="footnote" aria-label="see footnote 2">**</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="BRK">BRK</dt>
+    <dd>
+        <p aria-label="summary">Force Break</p>
+        <p aria-label="notes on the implementation">BRK initiates a software interrupt similar to a hardware<br>
+            interrupt (IRQ). The return address pushed to the stack is<br>
+            PC+2, providing an extra byte of spacing for a break mark<br>
+            (identifying a reason for the break.)<br>
+            The status register will be pushed to the stack with the break<br>
+            flag set to 1. However, when retrieved during RTI or by a PLP<br>
+            instruction, the break flag will be ignored.<br>
+            The interrupt disable flag is not set automatically.</p>
+        <p aria-label="synopsis">interrupt,<br>push PC+2, push SR </p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>implied</td>
+                    <td>BRK</td>
+                    <td>00</td>
+                    <td>1</td>
+                    <td>7 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="BVC">BVC</dt>
+    <dd>
+        <p aria-label="summary">Branch on Overflow Clear</p>
+        <p aria-label="synopsis">branch on V = 0</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>relative</td>
+                    <td>BVC oper</td>
+                    <td>50</td>
+                    <td>2</td>
+                    <td>2<a href="#opcodes-footnote2" class="footnote" aria-label="see footnote 2">**</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="BVS">BVS</dt>
+    <dd>
+        <p aria-label="summary">Branch on Overflow Set</p>
+        <p aria-label="synopsis">branch on V = 1</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>relative</td>
+                    <td>BVS oper</td>
+                    <td>70</td>
+                    <td>2</td>
+                    <td>2<a href="#opcodes-footnote2" class="footnote" aria-label="see footnote 2">**</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="CLC">CLC</dt>
+    <dd>
+        <p aria-label="summary">Clear Carry Flag</p>
+        <p aria-label="synopsis">0 <span aria-label="right-hand transfer">-&gt;</span> C</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>0</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>implied</td>
+                    <td>CLC</td>
+                    <td>18</td>
+                    <td>1</td>
+                    <td>2 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="CLD">CLD</dt>
+    <dd>
+        <p aria-label="summary">Clear Decimal Mode</p>
+        <p aria-label="synopsis">0 <span aria-label="right-hand transfer">-&gt;</span> D</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>0</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>implied</td>
+                    <td>CLD</td>
+                    <td>D8</td>
+                    <td>1</td>
+                    <td>2 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="CLI">CLI</dt>
+    <dd>
+        <p aria-label="summary">Clear Interrupt Disable Bit</p>
+        <p aria-label="synopsis">0 <span aria-label="right-hand transfer">-&gt;</span> I</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>0</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>implied</td>
+                    <td>CLI</td>
+                    <td>58</td>
+                    <td>1</td>
+                    <td>2 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="CLV">CLV</dt>
+    <dd>
+        <p aria-label="summary">Clear Overflow Flag</p>
+        <p aria-label="synopsis">0 <span aria-label="right-hand transfer">-&gt;</span> V</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>implied</td>
+                    <td>CLV</td>
+                    <td>B8</td>
+                    <td>1</td>
+                    <td>2 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="CMP">CMP</dt>
+    <dd>
+        <p aria-label="summary">Compare Memory with Accumulator</p>
+        <p aria-label="synopsis">A - M</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>immediate</td>
+                    <td>CMP #oper</td>
+                    <td>C9</td>
+                    <td>2</td>
+                    <td>2 </td>
+                </tr>
+                <tr>
+                    <td>zeropage</td>
+                    <td>CMP oper</td>
+                    <td>C5</td>
+                    <td>2</td>
+                    <td>3 </td>
+                </tr>
+                <tr>
+                    <td>zeropage,X</td>
+                    <td>CMP oper,X</td>
+                    <td>D5</td>
+                    <td>2</td>
+                    <td>4 </td>
+                </tr>
+                <tr>
+                    <td>absolute</td>
+                    <td>CMP oper</td>
+                    <td>CD</td>
+                    <td>3</td>
+                    <td>4 </td>
+                </tr>
+                <tr>
+                    <td>absolute,X</td>
+                    <td>CMP oper,X</td>
+                    <td>DD</td>
+                    <td>3</td>
+                    <td>4<a href="#opcodes-footnote1" class="footnote" aria-label="see footnote 1">*</a> </td>
+                </tr>
+                <tr>
+                    <td>absolute,Y</td>
+                    <td>CMP oper,Y</td>
+                    <td>D9</td>
+                    <td>3</td>
+                    <td>4<a href="#opcodes-footnote1" class="footnote" aria-label="see footnote 1">*</a> </td>
+                </tr>
+                <tr>
+                    <td>(indirect,X)</td>
+                    <td>CMP (oper,X)</td>
+                    <td>C1</td>
+                    <td>2</td>
+                    <td>6 </td>
+                </tr>
+                <tr>
+                    <td>(indirect),Y</td>
+                    <td>CMP (oper),Y</td>
+                    <td>D1</td>
+                    <td>2</td>
+                    <td>5<a href="#opcodes-footnote1" class="footnote" aria-label="see footnote 1">*</a> </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="CPX">CPX</dt>
+    <dd>
+        <p aria-label="summary">Compare Memory and Index X</p>
+        <p aria-label="synopsis">X - M</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>immediate</td>
+                    <td>CPX #oper</td>
+                    <td>E0</td>
+                    <td>2</td>
+                    <td>2 </td>
+                </tr>
+                <tr>
+                    <td>zeropage</td>
+                    <td>CPX oper</td>
+                    <td>E4</td>
+                    <td>2</td>
+                    <td>3 </td>
+                </tr>
+                <tr>
+                    <td>absolute</td>
+                    <td>CPX oper</td>
+                    <td>EC</td>
+                    <td>3</td>
+                    <td>4 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="CPY">CPY</dt>
+    <dd>
+        <p aria-label="summary">Compare Memory and Index Y</p>
+        <p aria-label="synopsis">Y - M</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>immediate</td>
+                    <td>CPY #oper</td>
+                    <td>C0</td>
+                    <td>2</td>
+                    <td>2 </td>
+                </tr>
+                <tr>
+                    <td>zeropage</td>
+                    <td>CPY oper</td>
+                    <td>C4</td>
+                    <td>2</td>
+                    <td>3 </td>
+                </tr>
+                <tr>
+                    <td>absolute</td>
+                    <td>CPY oper</td>
+                    <td>CC</td>
+                    <td>3</td>
+                    <td>4 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="DEC">DEC</dt>
+    <dd>
+        <p aria-label="summary">Decrement Memory by One</p>
+        <p aria-label="synopsis">M - 1 <span aria-label="right-hand transfer">-&gt;</span> M</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>zeropage</td>
+                    <td>DEC oper</td>
+                    <td>C6</td>
+                    <td>2</td>
+                    <td>5 </td>
+                </tr>
+                <tr>
+                    <td>zeropage,X</td>
+                    <td>DEC oper,X</td>
+                    <td>D6</td>
+                    <td>2</td>
+                    <td>6 </td>
+                </tr>
+                <tr>
+                    <td>absolute</td>
+                    <td>DEC oper</td>
+                    <td>CE</td>
+                    <td>3</td>
+                    <td>6 </td>
+                </tr>
+                <tr>
+                    <td>absolute,X</td>
+                    <td>DEC oper,X</td>
+                    <td>DE</td>
+                    <td>3</td>
+                    <td>7 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="DEX">DEX</dt>
+    <dd>
+        <p aria-label="summary">Decrement Index X by One</p>
+        <p aria-label="synopsis">X - 1 <span aria-label="right-hand transfer">-&gt;</span> X</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>implied</td>
+                    <td>DEX</td>
+                    <td>CA</td>
+                    <td>1</td>
+                    <td>2 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="DEY">DEY</dt>
+    <dd>
+        <p aria-label="summary">Decrement Index Y by One</p>
+        <p aria-label="synopsis">Y - 1 <span aria-label="right-hand transfer">-&gt;</span> Y</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>implied</td>
+                    <td>DEY</td>
+                    <td>88</td>
+                    <td>1</td>
+                    <td>2 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="EOR">EOR</dt>
+    <dd>
+        <p aria-label="summary">Exclusive-OR Memory with Accumulator</p>
+        <p aria-label="synopsis">A EOR M <span aria-label="right-hand transfer">-&gt;</span> A</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>immediate</td>
+                    <td>EOR #oper</td>
+                    <td>49</td>
+                    <td>2</td>
+                    <td>2 </td>
+                </tr>
+                <tr>
+                    <td>zeropage</td>
+                    <td>EOR oper</td>
+                    <td>45</td>
+                    <td>2</td>
+                    <td>3 </td>
+                </tr>
+                <tr>
+                    <td>zeropage,X</td>
+                    <td>EOR oper,X</td>
+                    <td>55</td>
+                    <td>2</td>
+                    <td>4 </td>
+                </tr>
+                <tr>
+                    <td>absolute</td>
+                    <td>EOR oper</td>
+                    <td>4D</td>
+                    <td>3</td>
+                    <td>4 </td>
+                </tr>
+                <tr>
+                    <td>absolute,X</td>
+                    <td>EOR oper,X</td>
+                    <td>5D</td>
+                    <td>3</td>
+                    <td>4<a href="#opcodes-footnote1" class="footnote" aria-label="see footnote 1">*</a> </td>
+                </tr>
+                <tr>
+                    <td>absolute,Y</td>
+                    <td>EOR oper,Y</td>
+                    <td>59</td>
+                    <td>3</td>
+                    <td>4<a href="#opcodes-footnote1" class="footnote" aria-label="see footnote 1">*</a> </td>
+                </tr>
+                <tr>
+                    <td>(indirect,X)</td>
+                    <td>EOR (oper,X)</td>
+                    <td>41</td>
+                    <td>2</td>
+                    <td>6 </td>
+                </tr>
+                <tr>
+                    <td>(indirect),Y</td>
+                    <td>EOR (oper),Y</td>
+                    <td>51</td>
+                    <td>2</td>
+                    <td>5<a href="#opcodes-footnote1" class="footnote" aria-label="see footnote 1">*</a> </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="INC">INC</dt>
+    <dd>
+        <p aria-label="summary">Increment Memory by One</p>
+        <p aria-label="synopsis">M + 1 <span aria-label="right-hand transfer">-&gt;</span> M</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>zeropage</td>
+                    <td>INC oper</td>
+                    <td>E6</td>
+                    <td>2</td>
+                    <td>5 </td>
+                </tr>
+                <tr>
+                    <td>zeropage,X</td>
+                    <td>INC oper,X</td>
+                    <td>F6</td>
+                    <td>2</td>
+                    <td>6 </td>
+                </tr>
+                <tr>
+                    <td>absolute</td>
+                    <td>INC oper</td>
+                    <td>EE</td>
+                    <td>3</td>
+                    <td>6 </td>
+                </tr>
+                <tr>
+                    <td>absolute,X</td>
+                    <td>INC oper,X</td>
+                    <td>FE</td>
+                    <td>3</td>
+                    <td>7 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="INX">INX</dt>
+    <dd>
+        <p aria-label="summary">Increment Index X by One</p>
+        <p aria-label="synopsis">X + 1 <span aria-label="right-hand transfer">-&gt;</span> X</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>implied</td>
+                    <td>INX</td>
+                    <td>E8</td>
+                    <td>1</td>
+                    <td>2 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="INY">INY</dt>
+    <dd>
+        <p aria-label="summary">Increment Index Y by One</p>
+        <p aria-label="synopsis">Y + 1 <span aria-label="right-hand transfer">-&gt;</span> Y</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>implied</td>
+                    <td>INY</td>
+                    <td>C8</td>
+                    <td>1</td>
+                    <td>2 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="JMP">JMP</dt>
+    <dd>
+        <p aria-label="summary">Jump to New Location</p>
+        <p aria-label="synopsis">(PC+1) <span aria-label="right-hand transfer">-&gt;</span> PCL<br>(PC+2) <span
+                aria-label="right-hand transfer">-&gt;</span> PCH</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>absolute</td>
+                    <td>JMP oper</td>
+                    <td>4C</td>
+                    <td>3</td>
+                    <td>3 </td>
+                </tr>
+                <tr>
+                    <td>indirect</td>
+                    <td>JMP (oper)</td>
+                    <td>6C</td>
+                    <td>3</td>
+                    <td>5 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="JSR">JSR</dt>
+    <dd>
+        <p aria-label="summary">Jump to New Location Saving Return Address</p>
+        <p aria-label="synopsis">push (PC+2),<br>(PC+1) <span aria-label="right-hand transfer">-&gt;</span>
+            PCL<br>(PC+2) <span aria-label="right-hand transfer">-&gt;</span> PCH</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>absolute</td>
+                    <td>JSR oper</td>
+                    <td>20</td>
+                    <td>3</td>
+                    <td>6 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="LDA">LDA</dt>
+    <dd>
+        <p aria-label="summary">Load Accumulator with Memory</p>
+        <p aria-label="synopsis">M <span aria-label="right-hand transfer">-&gt;</span> A</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>immediate</td>
+                    <td>LDA #oper</td>
+                    <td>A9</td>
+                    <td>2</td>
+                    <td>2 </td>
+                </tr>
+                <tr>
+                    <td>zeropage</td>
+                    <td>LDA oper</td>
+                    <td>A5</td>
+                    <td>2</td>
+                    <td>3 </td>
+                </tr>
+                <tr>
+                    <td>zeropage,X</td>
+                    <td>LDA oper,X</td>
+                    <td>B5</td>
+                    <td>2</td>
+                    <td>4 </td>
+                </tr>
+                <tr>
+                    <td>absolute</td>
+                    <td>LDA oper</td>
+                    <td>AD</td>
+                    <td>3</td>
+                    <td>4 </td>
+                </tr>
+                <tr>
+                    <td>absolute,X</td>
+                    <td>LDA oper,X</td>
+                    <td>BD</td>
+                    <td>3</td>
+                    <td>4<a href="#opcodes-footnote1" class="footnote" aria-label="see footnote 1">*</a> </td>
+                </tr>
+                <tr>
+                    <td>absolute,Y</td>
+                    <td>LDA oper,Y</td>
+                    <td>B9</td>
+                    <td>3</td>
+                    <td>4<a href="#opcodes-footnote1" class="footnote" aria-label="see footnote 1">*</a> </td>
+                </tr>
+                <tr>
+                    <td>(indirect,X)</td>
+                    <td>LDA (oper,X)</td>
+                    <td>A1</td>
+                    <td>2</td>
+                    <td>6 </td>
+                </tr>
+                <tr>
+                    <td>(indirect),Y</td>
+                    <td>LDA (oper),Y</td>
+                    <td>B1</td>
+                    <td>2</td>
+                    <td>5<a href="#opcodes-footnote1" class="footnote" aria-label="see footnote 1">*</a> </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="LDX">LDX</dt>
+    <dd>
+        <p aria-label="summary">Load Index X with Memory</p>
+        <p aria-label="synopsis">M <span aria-label="right-hand transfer">-&gt;</span> X</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>immediate</td>
+                    <td>LDX #oper</td>
+                    <td>A2</td>
+                    <td>2</td>
+                    <td>2 </td>
+                </tr>
+                <tr>
+                    <td>zeropage</td>
+                    <td>LDX oper</td>
+                    <td>A6</td>
+                    <td>2</td>
+                    <td>3 </td>
+                </tr>
+                <tr>
+                    <td>zeropage,Y</td>
+                    <td>LDX oper,Y</td>
+                    <td>B6</td>
+                    <td>2</td>
+                    <td>4 </td>
+                </tr>
+                <tr>
+                    <td>absolute</td>
+                    <td>LDX oper</td>
+                    <td>AE</td>
+                    <td>3</td>
+                    <td>4 </td>
+                </tr>
+                <tr>
+                    <td>absolute,Y</td>
+                    <td>LDX oper,Y</td>
+                    <td>BE</td>
+                    <td>3</td>
+                    <td>4<a href="#opcodes-footnote1" class="footnote" aria-label="see footnote 1">*</a> </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="LDY">LDY</dt>
+    <dd>
+        <p aria-label="summary">Load Index Y with Memory</p>
+        <p aria-label="synopsis">M <span aria-label="right-hand transfer">-&gt;</span> Y</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>immediate</td>
+                    <td>LDY #oper</td>
+                    <td>A0</td>
+                    <td>2</td>
+                    <td>2 </td>
+                </tr>
+                <tr>
+                    <td>zeropage</td>
+                    <td>LDY oper</td>
+                    <td>A4</td>
+                    <td>2</td>
+                    <td>3 </td>
+                </tr>
+                <tr>
+                    <td>zeropage,X</td>
+                    <td>LDY oper,X</td>
+                    <td>B4</td>
+                    <td>2</td>
+                    <td>4 </td>
+                </tr>
+                <tr>
+                    <td>absolute</td>
+                    <td>LDY oper</td>
+                    <td>AC</td>
+                    <td>3</td>
+                    <td>4 </td>
+                </tr>
+                <tr>
+                    <td>absolute,X</td>
+                    <td>LDY oper,X</td>
+                    <td>BC</td>
+                    <td>3</td>
+                    <td>4<a href="#opcodes-footnote1" class="footnote" aria-label="see footnote 1">*</a> </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="LSR">LSR</dt>
+    <dd>
+        <p aria-label="summary">Shift One Bit Right (Memory or Accumulator)</p>
+        <p aria-label="synopsis">0 <span aria-label="right-hand transfer">-&gt;</span> [76543210] <span
+                aria-label="right-hand transfer">-&gt;</span> C</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>accumulator</td>
+                    <td>LSR A</td>
+                    <td>4A</td>
+                    <td>1</td>
+                    <td>2 </td>
+                </tr>
+                <tr>
+                    <td>zeropage</td>
+                    <td>LSR oper</td>
+                    <td>46</td>
+                    <td>2</td>
+                    <td>5 </td>
+                </tr>
+                <tr>
+                    <td>zeropage,X</td>
+                    <td>LSR oper,X</td>
+                    <td>56</td>
+                    <td>2</td>
+                    <td>6 </td>
+                </tr>
+                <tr>
+                    <td>absolute</td>
+                    <td>LSR oper</td>
+                    <td>4E</td>
+                    <td>3</td>
+                    <td>6 </td>
+                </tr>
+                <tr>
+                    <td>absolute,X</td>
+                    <td>LSR oper,X</td>
+                    <td>5E</td>
+                    <td>3</td>
+                    <td>7 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="NOP">NOP</dt>
+    <dd>
+        <p aria-label="summary">No Operation</p>
+        <p aria-label="synopsis">---</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>implied</td>
+                    <td>NOP</td>
+                    <td>EA</td>
+                    <td>1</td>
+                    <td>2 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="ORA">ORA</dt>
+    <dd>
+        <p aria-label="summary">OR Memory with Accumulator</p>
+        <p aria-label="synopsis">A OR M <span aria-label="right-hand transfer">-&gt;</span> A</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>immediate</td>
+                    <td>ORA #oper</td>
+                    <td>09</td>
+                    <td>2</td>
+                    <td>2 </td>
+                </tr>
+                <tr>
+                    <td>zeropage</td>
+                    <td>ORA oper</td>
+                    <td>05</td>
+                    <td>2</td>
+                    <td>3 </td>
+                </tr>
+                <tr>
+                    <td>zeropage,X</td>
+                    <td>ORA oper,X</td>
+                    <td>15</td>
+                    <td>2</td>
+                    <td>4 </td>
+                </tr>
+                <tr>
+                    <td>absolute</td>
+                    <td>ORA oper</td>
+                    <td>0D</td>
+                    <td>3</td>
+                    <td>4 </td>
+                </tr>
+                <tr>
+                    <td>absolute,X</td>
+                    <td>ORA oper,X</td>
+                    <td>1D</td>
+                    <td>3</td>
+                    <td>4<a href="#opcodes-footnote1" class="footnote" aria-label="see footnote 1">*</a> </td>
+                </tr>
+                <tr>
+                    <td>absolute,Y</td>
+                    <td>ORA oper,Y</td>
+                    <td>19</td>
+                    <td>3</td>
+                    <td>4<a href="#opcodes-footnote1" class="footnote" aria-label="see footnote 1">*</a> </td>
+                </tr>
+                <tr>
+                    <td>(indirect,X)</td>
+                    <td>ORA (oper,X)</td>
+                    <td>01</td>
+                    <td>2</td>
+                    <td>6 </td>
+                </tr>
+                <tr>
+                    <td>(indirect),Y</td>
+                    <td>ORA (oper),Y</td>
+                    <td>11</td>
+                    <td>2</td>
+                    <td>5<a href="#opcodes-footnote1" class="footnote" aria-label="see footnote 1">*</a> </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="PHA">PHA</dt>
+    <dd>
+        <p aria-label="summary">Push Accumulator on Stack</p>
+        <p aria-label="synopsis">push A</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>implied</td>
+                    <td>PHA</td>
+                    <td>48</td>
+                    <td>1</td>
+                    <td>3 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="PHP">PHP</dt>
+    <dd>
+        <p aria-label="summary">Push Processor Status on Stack</p>
+        <p aria-label="notes on the implementation">The status register will be pushed with the break<br>flag and bit 5
+            set to 1.</p>
+        <p aria-label="synopsis">push SR</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>implied</td>
+                    <td>PHP</td>
+                    <td>08</td>
+                    <td>1</td>
+                    <td>3 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="PLA">PLA</dt>
+    <dd>
+        <p aria-label="summary">Pull Accumulator from Stack</p>
+        <p aria-label="synopsis">pull A</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>implied</td>
+                    <td>PLA</td>
+                    <td>68</td>
+                    <td>1</td>
+                    <td>4 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="PLP">PLP</dt>
+    <dd>
+        <p aria-label="summary">Pull Processor Status from Stack</p>
+        <p aria-label="notes on the implementation">The status register will be pulled with the break<br>flag and bit 5
+            ignored.</p>
+        <p aria-label="synopsis">pull SR</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td colspan="6">from stack</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>implied</td>
+                    <td>PLP</td>
+                    <td>28</td>
+                    <td>1</td>
+                    <td>4 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="ROL">ROL</dt>
+    <dd>
+        <p aria-label="summary">Rotate One Bit Left (Memory or Accumulator)</p>
+        <p aria-label="synopsis">C <span aria-label="left-hand transfer">&lt;-</span> [76543210] <span
+                aria-label="left-hand transfer">&lt;-</span> C</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>accumulator</td>
+                    <td>ROL A</td>
+                    <td>2A</td>
+                    <td>1</td>
+                    <td>2 </td>
+                </tr>
+                <tr>
+                    <td>zeropage</td>
+                    <td>ROL oper</td>
+                    <td>26</td>
+                    <td>2</td>
+                    <td>5 </td>
+                </tr>
+                <tr>
+                    <td>zeropage,X</td>
+                    <td>ROL oper,X</td>
+                    <td>36</td>
+                    <td>2</td>
+                    <td>6 </td>
+                </tr>
+                <tr>
+                    <td>absolute</td>
+                    <td>ROL oper</td>
+                    <td>2E</td>
+                    <td>3</td>
+                    <td>6 </td>
+                </tr>
+                <tr>
+                    <td>absolute,X</td>
+                    <td>ROL oper,X</td>
+                    <td>3E</td>
+                    <td>3</td>
+                    <td>7 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="ROR">ROR</dt>
+    <dd>
+        <p aria-label="summary">Rotate One Bit Right (Memory or Accumulator)</p>
+        <p aria-label="synopsis">C <span aria-label="right-hand transfer">-&gt;</span> [76543210] <span
+                aria-label="right-hand transfer">-&gt;</span> C</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>accumulator</td>
+                    <td>ROR A</td>
+                    <td>6A</td>
+                    <td>1</td>
+                    <td>2 </td>
+                </tr>
+                <tr>
+                    <td>zeropage</td>
+                    <td>ROR oper</td>
+                    <td>66</td>
+                    <td>2</td>
+                    <td>5 </td>
+                </tr>
+                <tr>
+                    <td>zeropage,X</td>
+                    <td>ROR oper,X</td>
+                    <td>76</td>
+                    <td>2</td>
+                    <td>6 </td>
+                </tr>
+                <tr>
+                    <td>absolute</td>
+                    <td>ROR oper</td>
+                    <td>6E</td>
+                    <td>3</td>
+                    <td>6 </td>
+                </tr>
+                <tr>
+                    <td>absolute,X</td>
+                    <td>ROR oper,X</td>
+                    <td>7E</td>
+                    <td>3</td>
+                    <td>7 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="RTI">RTI</dt>
+    <dd>
+        <p aria-label="summary">Return from Interrupt</p>
+        <p aria-label="notes on the implementation">The status register is pulled with the break flag<br>and bit 5
+            ignored. Then PC is pulled from the stack.</p>
+        <p aria-label="synopsis">pull SR, pull PC</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td colspan="6">from stack</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>implied</td>
+                    <td>RTI</td>
+                    <td>40</td>
+                    <td>1</td>
+                    <td>6 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="RTS">RTS</dt>
+    <dd>
+        <p aria-label="summary">Return from Subroutine</p>
+        <p aria-label="synopsis">pull PC, PC+1 <span aria-label="right-hand transfer">-&gt;</span> PC</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>implied</td>
+                    <td>RTS</td>
+                    <td>60</td>
+                    <td>1</td>
+                    <td>6 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="SBC">SBC</dt>
+    <dd>
+        <p aria-label="summary">Subtract Memory from Accumulator with Borrow</p>
+        <p aria-label="synopsis">A - M - <span style="text-decoration: overline">C</span> <span
+                aria-label="right-hand transfer">-&gt;</span> A</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>+</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>immediate</td>
+                    <td>SBC #oper</td>
+                    <td>E9</td>
+                    <td>2</td>
+                    <td>2 </td>
+                </tr>
+                <tr>
+                    <td>zeropage</td>
+                    <td>SBC oper</td>
+                    <td>E5</td>
+                    <td>2</td>
+                    <td>3 </td>
+                </tr>
+                <tr>
+                    <td>zeropage,X</td>
+                    <td>SBC oper,X</td>
+                    <td>F5</td>
+                    <td>2</td>
+                    <td>4 </td>
+                </tr>
+                <tr>
+                    <td>absolute</td>
+                    <td>SBC oper</td>
+                    <td>ED</td>
+                    <td>3</td>
+                    <td>4 </td>
+                </tr>
+                <tr>
+                    <td>absolute,X</td>
+                    <td>SBC oper,X</td>
+                    <td>FD</td>
+                    <td>3</td>
+                    <td>4<a href="#opcodes-footnote1" class="footnote" aria-label="see footnote 1">*</a> </td>
+                </tr>
+                <tr>
+                    <td>absolute,Y</td>
+                    <td>SBC oper,Y</td>
+                    <td>F9</td>
+                    <td>3</td>
+                    <td>4<a href="#opcodes-footnote1" class="footnote" aria-label="see footnote 1">*</a> </td>
+                </tr>
+                <tr>
+                    <td>(indirect,X)</td>
+                    <td>SBC (oper,X)</td>
+                    <td>E1</td>
+                    <td>2</td>
+                    <td>6 </td>
+                </tr>
+                <tr>
+                    <td>(indirect),Y</td>
+                    <td>SBC (oper),Y</td>
+                    <td>F1</td>
+                    <td>2</td>
+                    <td>5<a href="#opcodes-footnote1" class="footnote" aria-label="see footnote 1">*</a> </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="SEC">SEC</dt>
+    <dd>
+        <p aria-label="summary">Set Carry Flag</p>
+        <p aria-label="synopsis">1 <span aria-label="right-hand transfer">-&gt;</span> C</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>implied</td>
+                    <td>SEC</td>
+                    <td>38</td>
+                    <td>1</td>
+                    <td>2 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="SED">SED</dt>
+    <dd>
+        <p aria-label="summary">Set Decimal Flag</p>
+        <p aria-label="synopsis">1 <span aria-label="right-hand transfer">-&gt;</span> D</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>1</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>implied</td>
+                    <td>SED</td>
+                    <td>F8</td>
+                    <td>1</td>
+                    <td>2 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="SEI">SEI</dt>
+    <dd>
+        <p aria-label="summary">Set Interrupt Disable Status</p>
+        <p aria-label="synopsis">1 <span aria-label="right-hand transfer">-&gt;</span> I</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>1</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>implied</td>
+                    <td>SEI</td>
+                    <td>78</td>
+                    <td>1</td>
+                    <td>2 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="STA">STA</dt>
+    <dd>
+        <p aria-label="summary">Store Accumulator in Memory</p>
+        <p aria-label="synopsis">A <span aria-label="right-hand transfer">-&gt;</span> M</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>zeropage</td>
+                    <td>STA oper</td>
+                    <td>85</td>
+                    <td>2</td>
+                    <td>3 </td>
+                </tr>
+                <tr>
+                    <td>zeropage,X</td>
+                    <td>STA oper,X</td>
+                    <td>95</td>
+                    <td>2</td>
+                    <td>4 </td>
+                </tr>
+                <tr>
+                    <td>absolute</td>
+                    <td>STA oper</td>
+                    <td>8D</td>
+                    <td>3</td>
+                    <td>4 </td>
+                </tr>
+                <tr>
+                    <td>absolute,X</td>
+                    <td>STA oper,X</td>
+                    <td>9D</td>
+                    <td>3</td>
+                    <td>5 </td>
+                </tr>
+                <tr>
+                    <td>absolute,Y</td>
+                    <td>STA oper,Y</td>
+                    <td>99</td>
+                    <td>3</td>
+                    <td>5 </td>
+                </tr>
+                <tr>
+                    <td>(indirect,X)</td>
+                    <td>STA (oper,X)</td>
+                    <td>81</td>
+                    <td>2</td>
+                    <td>6 </td>
+                </tr>
+                <tr>
+                    <td>(indirect),Y</td>
+                    <td>STA (oper),Y</td>
+                    <td>91</td>
+                    <td>2</td>
+                    <td>6 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="STX">STX</dt>
+    <dd>
+        <p aria-label="summary">Store Index X in Memory</p>
+        <p aria-label="synopsis">X <span aria-label="right-hand transfer">-&gt;</span> M</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>zeropage</td>
+                    <td>STX oper</td>
+                    <td>86</td>
+                    <td>2</td>
+                    <td>3 </td>
+                </tr>
+                <tr>
+                    <td>zeropage,Y</td>
+                    <td>STX oper,Y</td>
+                    <td>96</td>
+                    <td>2</td>
+                    <td>4 </td>
+                </tr>
+                <tr>
+                    <td>absolute</td>
+                    <td>STX oper</td>
+                    <td>8E</td>
+                    <td>3</td>
+                    <td>4 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="STY">STY</dt>
+    <dd>
+        <p aria-label="summary">Sore Index Y in Memory</p>
+        <p aria-label="synopsis">Y <span aria-label="right-hand transfer">-&gt;</span> M</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>zeropage</td>
+                    <td>STY oper</td>
+                    <td>84</td>
+                    <td>2</td>
+                    <td>3 </td>
+                </tr>
+                <tr>
+                    <td>zeropage,X</td>
+                    <td>STY oper,X</td>
+                    <td>94</td>
+                    <td>2</td>
+                    <td>4 </td>
+                </tr>
+                <tr>
+                    <td>absolute</td>
+                    <td>STY oper</td>
+                    <td>8C</td>
+                    <td>3</td>
+                    <td>4 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="TAX">TAX</dt>
+    <dd>
+        <p aria-label="summary">Transfer Accumulator to Index X</p>
+        <p aria-label="synopsis">A <span aria-label="right-hand transfer">-&gt;</span> X</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>implied</td>
+                    <td>TAX</td>
+                    <td>AA</td>
+                    <td>1</td>
+                    <td>2 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="TAY">TAY</dt>
+    <dd>
+        <p aria-label="summary">Transfer Accumulator to Index Y</p>
+        <p aria-label="synopsis">A <span aria-label="right-hand transfer">-&gt;</span> Y</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>implied</td>
+                    <td>TAY</td>
+                    <td>A8</td>
+                    <td>1</td>
+                    <td>2 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="TSX">TSX</dt>
+    <dd>
+        <p aria-label="summary">Transfer Stack Pointer to Index X</p>
+        <p aria-label="synopsis">SP <span aria-label="right-hand transfer">-&gt;</span> X</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>implied</td>
+                    <td>TSX</td>
+                    <td>BA</td>
+                    <td>1</td>
+                    <td>2 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="TXA">TXA</dt>
+    <dd>
+        <p aria-label="summary">Transfer Index X to Accumulator</p>
+        <p aria-label="synopsis">X <span aria-label="right-hand transfer">-&gt;</span> A</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>implied</td>
+                    <td>TXA</td>
+                    <td>8A</td>
+                    <td>1</td>
+                    <td>2 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="TXS">TXS</dt>
+    <dd>
+        <p aria-label="summary">Transfer Index X to Stack Register</p>
+        <p aria-label="synopsis">X <span aria-label="right-hand transfer">-&gt;</span> SP</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>implied</td>
+                    <td>TXS</td>
+                    <td>9A</td>
+                    <td>1</td>
+                    <td>2 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+
+    <dt id="TYA">TYA</dt>
+    <dd>
+        <p aria-label="summary">Transfer Index Y to Accumulator</p>
+        <p aria-label="synopsis">Y <span aria-label="right-hand transfer">-&gt;</span> A</p>
+        <table aria-label="flags">
+            <tbody>
+                <tr>
+                    <th>N</th>
+                    <th>Z</th>
+                    <th>C</th>
+                    <th>I</th>
+                    <th>D</th>
+                    <th>V</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+        <table aria-label="details">
+            <tbody>
+                <tr>
+                    <th>addressing</th>
+                    <th>assembler</th>
+                    <th>opc</th>
+                    <th>bytes</th>
+                    <th>cycles</th>
+                </tr>
+                <tr>
+                    <td>implied</td>
+                    <td>TYA</td>
+                    <td>98</td>
+                    <td>1</td>
+                    <td>2 </td>
+                </tr>
+            </tbody>
+        </table>
+    </dd>
+</dl>
